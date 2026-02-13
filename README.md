@@ -1,6 +1,6 @@
 # 📰 News Aggregator Backend API
 
-This is a technical assessment project for the Backend Developer position. The system aggregates news articles from multiple sources and serves them via a highly flexible, filtered API.
+
 
 ## 🚀 Key Features
 - **Data Aggregation:** Automated fetching from **The Guardian**, **New York Times**, and **NewsAPI.org**.
