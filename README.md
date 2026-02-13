@@ -42,13 +42,16 @@ php artisan news:fetch
 php artisan serve
 ```
 
-🔌 API Documentation
-Get Articles
-Endpoint: GET /api/articles
+### 🔌 API Documentation
+- **Get Articles**
+- **Endpoint:** GET /api/articles
 
 Parameter   Type    Description
+---
 q   string  Search keyword
+---
 categories[]    array   One or more categories (e.g. tech, sports)
+---
 sources[]   array   Specific news source names
 authors[]   array   Specific author names
 date    string  Filter by date (YYYY-MM-DD)
