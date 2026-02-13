@@ -6,11 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Repositories\ArticleRepository;
 use Illuminate\Http\Request;
 use App\Http\Resources\ArticleResource;
+use App\Interfaces\ArticleRepositoryInterface;
 class ArticleController extends Controller
 {
     protected $articleRepository;
 
-    public function __construct(ArticleRepository $articleRepository)
+    public function __construct(ArticleRepositoryInterface $articleRepository)
     {
         $this->articleRepository = $articleRepository;
     }

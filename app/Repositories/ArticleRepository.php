@@ -4,8 +4,8 @@ namespace App\Repositories;
 
 use App\Models\Article;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-
-class ArticleRepository
+use App\Interfaces\ArticleRepositoryInterface;
+class ArticleRepository implements ArticleRepositoryInterface
 {
     /**
      * Get filtered articles based on request parameters.
