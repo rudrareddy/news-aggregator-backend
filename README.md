@@ -51,18 +51,12 @@ php artisan serve
 
 ```
 
-🔌 API Documentation
-Get Articles
-Endpoint: `GET /api/articles`
-ParameterTypeDescription`qstring`Search keyword`categories[]array`One or more categories (e.g. `tech`, `sports`)`sources[]array`Specific news source names`authors[]array`Specific author names`datestring`Filter by date (`YYYY-MM-DD`)
-Example Query: `GET /api/articles?q=crypto&categories[]=finance&categories[]=tech&sources[]=The+Guardian`
-🏗 Architectural Implementation
-Dependency Inversion (SOLID)
-The `ArticleController` does not depend on a concrete repository. It depends on `ArticleRepositoryInterface`. This is managed via the `RepositoryServiceProvider`.
-Data Strategy
-We use the Strategy Pattern for news sources. Each API has a dedicated Service class. To add a new source (e.g., BBC), you simply create a new Service implementing `NewsSourceInterface` and register it in the aggregator—no existing code needs to be modified.
-Deduplication
-To prevent database bloating, we use a unique index on the article `url` and the `updateOrCreate()` method. This ensures that even if articles are fetched multiple times, they are updated rather than duplicated.
+Parameter,Type,Description
+q,string,Search keyword
+categories[],array,"One or more categories (e.g. tech, sports)"
+sources[],array,Specific news source names
+authors[],array,Specific author names
+date,string,Filter by date (YYYY-MM-DD)
 🧪 Testing
 Run the test suite to verify API functionality:
 Bash
