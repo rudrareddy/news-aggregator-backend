@@ -37,4 +37,19 @@ NYTIMES_KEY
 php artisan migrate
 php artisan news:fetch
 ```
+### 4. Run Server
+```bash
+php artisan serve
+```
+
+🔌 API Documentation
+Get Articles
+Endpoint: GET /api/articles
+
+Parameter   Type    Description
+q   string  Search keyword
+categories[]    array   One or more categories (e.g. tech, sports)
+sources[]   array   Specific news source names
+authors[]   array   Specific author names
+date    string  Filter by date (YYYY-MM-DD)
 
