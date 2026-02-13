@@ -46,6 +46,13 @@ php artisan serve
 - **Get Articles**
 - **Endpoint:** GET /api/articles
 
+Endpoint: GET /api/articles
+
+- **Example Query**
+```bash
+GET /api/articles?q=crypto&categories[]=finance&categories[]=tech&sources[]=The+Guardian
+```
+
 
 ### 🏗 Architectural Implementation
 - **Dependency Inversion (SOLID)**
