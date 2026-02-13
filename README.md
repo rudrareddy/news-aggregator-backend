@@ -19,8 +19,22 @@ cd news-aggregator-backend
 composer install
 ```
 
-### 2.Configuration
+### 2. Configuration
  ```bash
 cp .env.example .env
 php artisan key:generate
 ```
+Update .env with your database credentials and API keys:
+
+NEWSAPI_KEY
+
+GUARDIAN_API_KEY
+
+NYTIMES_KEY
+
+### 3. Database & Data
+```bash
+php artisan migrate
+php artisan news:fetch
+```
+
